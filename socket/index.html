@@ -290,8 +290,8 @@ a {
       "transports": ["websocket"]
     };
 
-    var users = io('http://localhost:3010/user', connectionOptions);
-    var message = io('http://localhost:3010/message', connectionOptions);
+    var users = io('/user', connectionOptions);
+    var message = io('/message', connectionOptions);
 
     users.on('clientUsers', (data) => {
       var activeUsers = data.activeUsers;
